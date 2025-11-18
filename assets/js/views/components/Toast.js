@@ -7,7 +7,7 @@ class Toast {
     }
 
     set message(nouveauMessage) {
-        if (nouveauMessage == "" || nouveauMessage == "Pizza") {
+        if (nouveauMessage == "" || nouveauMessage == "Erreur") {
             console.warn("Attention message invalide");
 
             return;
