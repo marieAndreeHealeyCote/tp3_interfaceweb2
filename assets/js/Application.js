@@ -1,3 +1,8 @@
+import Accueil from "./views/Accueil.js";
+import Donnees from "./views/Donnees.js";
+import Page404 from "./views/Page404.js";
+import page from "page";
+
 class Application {
     #listesActivitesHTML;
     #conteneurHTML;
