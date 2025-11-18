@@ -1,4 +1,7 @@
 import dompurify from "dompurify";
+import moment from "moment";
+import "moment/locale/fr";
+moment.locale("fr");
 
 class Accueil {
     #application;
@@ -27,7 +30,8 @@ class Accueil {
                     En 2019, un chantier de collaboration avec les 19 arrondissements a été mis en place pour la validation de la base de données géolocalisée.
                 </div>
                 <div>
-                    Ville de Montréal, Installations récréatives, sportives et culturelles extérieures, Montréal: Données ouvertes de la Ville de Montréal, 2025. [Ensemble de données]. Disponible: https://donnees.montreal.ca/dataset/installations-recreatives-sportives-et-culturelles. [consulté le 18 novembre 2025].
+                    Ville de Montréal, Installations récréatives, sportives et culturelles extérieures, Montréal: Données ouvertes de la Ville de Montréal, 2025. [Ensemble de données].
+                    Disponible: https://donnees.montreal.ca/dataset/installations-recreatives-sportives-et-culturelles. [consulté le ${moment("2025-11-18").format("dddd, DD-MM-YYYY")}].
                 </div>
             </div>
             <div data-liste-activites></div>
