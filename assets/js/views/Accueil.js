@@ -14,10 +14,28 @@ class Accueil {
 
     render() {
         this.#application.conteneurHTML.innerHTML = ` 
-          <div>
-            <h1>Données des installations récréatives, sportives et culturelles extérieures de Montréal</h1>
-            <h2>L'application de suivis des installations récréatives, sportives et culturelles extérieures de la Ville de Montréal</h2>
-            <div>
+          <div class="px-6 pt-32 max-w-4xl mx-auto">
+            <div class="space-x-4 mb-6">
+                <h1 class="text-4xl font-bold text-gray-900">
+                    Données des installations récréatives, sportives et culturelles extérieures de Montréal
+                </h1>
+            </div>
+            <div class="space-x-4 mb-6">
+                <h2 class="text-2xl font-bold text-blue-600">
+                    L'application de suivis des installations récréatives, sportives et culturelles extérieures de la Ville de Montréal
+                </h2>
+            </div>
+            <div class="space-y-6">
+                <div>
+                    La Ville de Montréal propose sur son territoire une multitude d'installations récréatives, sportives et culturelles.
+                    Elle répertorie plus de 3 396 installations extérieures, dont 77 piscines, 95 pataugeoires, 150 jeux d'eau et près de 3 000 plateaux et aires de jeux.
+                </div>
+                <div>
+                    Le Plan directeur du sport et du plein air urbains encadre la structure de l'inventaire avec 96 classes d’installations extérieures reconnues.
+                    Le contenu des données permet la consultation du nombre des installations par arrondissement.
+                    Les données ne sont pas représentatives des installations localisées dans le territoire des villes liées qui n'y sont représentées qu'en partie.
+                </div>
+                // mettre un leaflet (carte du territoire)   
                 <div>
                     En 2013, le Service de la diversité sociale et des sports a amorcé le Plan directeur du sport et du plein air urbains.
                     À cet effet, un inventaire des actifs en sports et en plein air urbain a été réalisé avec la collaboration des 19 arrondissements et du Service des grands parcs, du Mont-Royal et des sports (SGPMRS).
@@ -29,7 +47,7 @@ class Accueil {
                 <div>
                     En 2019, un chantier de collaboration avec les 19 arrondissements a été mis en place pour la validation de la base de données géolocalisée.
                 </div>
-                <div>
+                <div class="text-sm text-gray-600"> 
                     Ville de Montréal, Installations récréatives, sportives et culturelles extérieures, Montréal: Données ouvertes de la Ville de Montréal, 2025. [Ensemble de données].
                     Disponible: https://donnees.montreal.ca/dataset/installations-recreatives-sportives-et-culturelles. [consulté le ${moment("2025-11-18").format("dddd, DD-MM-YYYY")}].
                 </div>

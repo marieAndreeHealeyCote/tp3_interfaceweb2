@@ -9,9 +9,29 @@
   </head>
   <body>
     <header>
-      <nav>
-        <a href="/">Accueil</a>
-        <a href="/sources">Sources des données</a>
+      <nav class="bg-white shadow-md fixed top-0 left-0 w-full z-20">
+        <div
+          class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between"
+        >
+          <div class="flex items-center space-x-3">
+            <a href="/">
+              <img
+                src="assets/img/logo.png"
+                alt="Logo Montréal"
+                className="w-10 h-10 object-contain"
+              />
+            </a>
+            <span class="text-xl font-bold text-gray-700"> Montréal </span>
+          </div>
+          <ul class="flex space-x-6 text-gray-700 font-medium">
+            <li class="hover:text-blue-600 cursor-pointer">
+              <a href="/">Accueil</a>
+            </li>
+            <li class="hover:text-blue-600 cursor-pointer">
+              <a href="/sources">Sources</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
     <div data-application></div>

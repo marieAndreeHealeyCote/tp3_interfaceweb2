@@ -11,37 +11,37 @@ class Donnees {
     }
     render() {
         this.#application.conteneurHTML.innerHTML = `
-        <section>
-            <h2>Données des installations récréatives, sportives et culturelles extérieures de Montréal</h2>
-            <h3>Sources des données</h3>
-            <div>
-                <div>
-                    La Ville de Montréal propose sur son territoire une multitude d'installations récréatives, sportives et culturelles.
-                    Elle répertorie plus de 3 396 installations extérieures, dont 77 piscines, 95 pataugeoires, 150 jeux d'eau et près de 3 000 plateaux et aires de jeux.
-                </div>
-                <div>
-                    Le Plan directeur du sport et du plein air urbains encadre la structure de l'inventaire avec 96 classes d’installations extérieures reconnues.
-                    Le contenu des données permet la consultation du nombre des installations par arrondissement.
-                    Les données ne sont pas représentatives des installations localisées dans le territoire des villes liées qui n'y sont représentées qu'en partie.
-                </div>    
+        <div class="px-6 pt-32 max-w-4xl mx-auto">
+            <div class="space-x-4 mb-6">
+                <h1 class="text-4xl font-bold text-gray-900">
+                    Données des installations récréatives, sportives et culturelles extérieures de Montréal
+                </h1>
+            </div>
+            <div class="space-x-4 mb-6">
+                <h2 class="text-2xl font-bold text-blue-600">
+                    L'application de suivis des installations récréatives, sportives et culturelles extérieures de la Ville de Montréal
+                </h2>
+            </div>
+            <div class="space-y-6 text-gray-700 leading-relaxe">
                 <div>
                     Les données des installations récréatives, sportives et culturelles extérieures de Montréal sont accessibles publiquement via le portail Données Montréal.
-                    Dernière modification de la métadonnée ${moment("2025-10-17").format("dddd, DD-MM-YYYY")}.
+                </div>
+                <p class="italic text-gray-600">Données récupérées le ${moment("2025-11-18").format("dddd, DD-MM-YYYY")}</p>
+                <h3 class="text-lg font-semibold text-blue-600">
+                    <a class="underline hover:text-blue-800 transition" href="https://donnees.montreal.ca/dataset/installations-recreatives-sportives-et-culturelles"target="_blank">
+                        Lien vers le portail du site de Données ouvertes de Montréal
+                    </a>
+                </h3>
+                <div>
+                    Il est possible de consulter et télécharger les données des installations récréatives, sportives et culturelles extérieures de Montréal en visitant le portail de Données Montréal à l'adresse suivante :
+                </div>
+                <div class="text-sm text-gray-600">
+                    Ville de Montréal, Installations récréatives, sportives et culturelles extérieures, Montréal: Données ouvertes de la Ville de Montréal, 2025.
+                    [Ensemble de données]. Disponible: https://donnees.montreal.ca/dataset/installations-recreatives-sportives-et-culturelles.
+                    [consulté le ${moment("2025-11-18").format("dddd, DD-MM-YYYY")}].
                 </div>
             </div>
-            <p>Données récupérées le ${moment().format("dddd, DD-MM-YYYY")}</p>
-            <h3>
-                <a href="https://donnees.montreal.ca/dataset/installations-recreatives-sportives-et-culturelles">Lien vers le portail Données Montréal</a>
-            </h3>
-            <div>
-                Il est possible de consulter et télécharger les données des installations récréatives, sportives et culturelles extérieures de Montréal en visitant le portail de Données Montréal à l'adresse suivante :
-            </div>
-            <div>
-                Ville de Montréal, Installations récréatives, sportives et culturelles extérieures, Montréal: Données ouvertes de la Ville de Montréal, 2025. 
-                [Ensemble de données]. Disponible: https://donnees.montreal.ca/dataset/installations-recreatives-sportives-et-culturelles. 
-                [consulté le ${moment("2025-11-18").format("dddd, DD-MM-YYYY")}]. 
-            </div>
-               `;
+         </div>      `;
     }
 }
 export default Donnees;
