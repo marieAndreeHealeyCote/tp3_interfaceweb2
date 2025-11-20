@@ -26,10 +26,10 @@ class Donnees {
                 <div>
                     Les données des installations récréatives, sportives et culturelles extérieures de Montréal sont accessibles publiquement via le portail Données Montréal.
                 </div>
-                <p class="italic text-gray-600">Données récupérées le ${moment("2025-11-18").format("dddd, DD-MM-YYYY")}</p>
+                <p class="italic text-gray-600">Données récupérées le ${moment().format("MMM Do YY")}</p>
                 <h3 class="text-lg font-semibold text-blue-600">
                     <a class="underline hover:text-blue-800 transition" href="https://donnees.montreal.ca/dataset/installations-recreatives-sportives-et-culturelles"target="_blank">
-                        Lien vers le portail du site de Données ouvertes de Montréal
+                        Lien vers le portail de Données ouvertes de Montréal
                     </a>
                 </h3>
                 <div>
@@ -37,9 +37,13 @@ class Donnees {
                 </div>
                 <div class="text-sm text-gray-600">
                     Ville de Montréal, Installations récréatives, sportives et culturelles extérieures, Montréal: Données ouvertes de la Ville de Montréal, 2025.
-                    [Ensemble de données]. Disponible: https://donnees.montreal.ca/dataset/installations-recreatives-sportives-et-culturelles.
-                    [consulté le ${moment("2025-11-18").format("dddd, DD-MM-YYYY")}].
+                    [Ensemble de données]. Disponible: <a class="hover:text-blue-600 cursor-pointer" href="https://donnees.montreal.ca/dataset/installations-recreatives-sportives-et-culturelles"target="_blank">https://donnees.montreal.ca/dataset/installations-recreatives-sportives-et-culturelles</a>.
+                    [consulté le ${moment().format("MMM Do YY")}].
                 </div>
+            </div>
+            <div class="my-10">
+                <img src="assets/img/ville.webp" alt="Installations extérieures Montréal" class="w-full max-w-3xl mx-auto rounded-lg shadow"/>
+                <!-- image provenant de https://montreal.ca/-->
             </div>
          </div>      `;
     }

@@ -26,30 +26,30 @@ class Accueil {
                 </h2>
             </div>
             <div class="space-y-6">
-                <div>
+                <div class="italic">
                     La Ville de Montréal propose sur son territoire une multitude d'installations récréatives, sportives et culturelles.
                     Elle répertorie plus de 3 396 installations extérieures, dont 77 piscines, 95 pataugeoires, 150 jeux d'eau et près de 3 000 plateaux et aires de jeux.
                 </div>
-                <div>
+                <div class="italic">
                     Le Plan directeur du sport et du plein air urbains encadre la structure de l'inventaire avec 96 classes d’installations extérieures reconnues.
                     Le contenu des données permet la consultation du nombre des installations par arrondissement.
                     Les données ne sont pas représentatives des installations localisées dans le territoire des villes liées qui n'y sont représentées qu'en partie.
                 </div>
-                // mettre un leaflet (carte du territoire)   
-                <div>
+                 <!-- mettre un leaflet (carte du territoire)-->
+                <div class="italic">
                     En 2013, le Service de la diversité sociale et des sports a amorcé le Plan directeur du sport et du plein air urbains.
                     À cet effet, un inventaire des actifs en sports et en plein air urbain a été réalisé avec la collaboration des 19 arrondissements et du Service des grands parcs, du Mont-Royal et des sports (SGPMRS).
                 </div>
-                <div>
+                <div class="italic">
                     La couche des installations extérieures a été créée à partir de la géolocalisation de l'inventaire des actifs en interprétant les orthophotos des années 2016 et 2018.
                     La position des différentes installations est alors approximative.
                 </div>
-                <div>
+                <div class="italic">
                     En 2019, un chantier de collaboration avec les 19 arrondissements a été mis en place pour la validation de la base de données géolocalisée.
                 </div>
                 <div class="text-sm text-gray-600"> 
                     Ville de Montréal, Installations récréatives, sportives et culturelles extérieures, Montréal: Données ouvertes de la Ville de Montréal, 2025. [Ensemble de données].
-                    Disponible: https://donnees.montreal.ca/dataset/installations-recreatives-sportives-et-culturelles. [consulté le ${moment("2025-11-18").format("dddd, DD-MM-YYYY")}].
+                    Disponible: <a class="hover:text-blue-600 cursor-pointer" href="https://donnees.montreal.ca/dataset/installations-recreatives-sportives-et-culturelles"target="_blank">https://donnees.montreal.ca/dataset/installations-recreatives-sportives-et-culturelles</a>. [consulté le ${moment().format("MMM Do YY")}].
                 </div>
             </div>
             <div data-liste-activites></div>
