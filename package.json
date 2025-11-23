@@ -25,5 +25,13 @@
     "page": "^1.11.6",
     "sortablejs": "^1.15.6",
     "tailwindcss": "^4.1.17"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "4.53.2"
+  },
+  "overrides": {
+    "vite": {
+      "rollup": "npm:@rollup/wasm-node"
+    }
   }
 }
