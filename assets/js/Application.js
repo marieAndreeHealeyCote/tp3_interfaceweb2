@@ -2,14 +2,25 @@ import Accueil from "./views/Accueil.js";
 import Donnees from "./views/Donnees.js";
 import Page404 from "./views/Page404.js";
 import page from "page";
+// import Spinner from "./components/Spinner.js";
 
 class Application {
     #listesActivitesHTML;
     #conteneurHTML;
     #vueActuelle;
 
+    #spinnerHTML;
+
     constructor() {
         this.#conteneurHTML = document.querySelector("[data-application]");
+        // this.#spinnerHTML = document.querySelector("mon-spinner");
+
+        // this.#spinnerHTML.setAttribute("msg", "    Veuillez patienter...");
+        // this.#spinnerHTML.afficher();
+
+        // afficher() {
+        //     this.#injecterHTML();
+        // }
 
         page(
             "/",
