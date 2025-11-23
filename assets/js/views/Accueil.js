@@ -41,17 +41,18 @@ class Accueil {
         const requete = await fetch("https://donnees.montreal.ca/dataset/60850740-dd83-47ee-9a19-13d674e90314/resource/2dac229f-6089-4cb7-ab0b-eadc6a147d5d/download/terrain_sport_ext.json"
         );
         const reponse = await requete.json();
-        console.log(reponse);
+
         this.#listesActivitesHTML.innerHTML = "";
 
-        let gabarit = "<div class='p-5 grid grid-cols-3 gap-3>";
+        let gabarit = `<div class="p-5 grid grid-cols-3 gap-3">`;
         reponse.features.forEach(function (feature) {
             gabarit += `
-            <div class="p-5 bg-slate-800 text-white basis-1/3">
-            <h3 class="text-slate-300 font-bold"><i class="fa-solid fa-truck mr-4 text-emerald-600"></i>  ">${feature.properties["NOM"]}</div>
-            <h4 class="text-slate-300 font-bold"><i class="fa-solid fa-truck mr-4 text-emerald-600"></i>  ">${feature.properties["ARROND"]}</div>
-            <h4 class="text-slate-300 font-bold"><i class="fa-solid fa-truck mr-4 text-emerald-600"></i>  ">${feature.properties["TYPE"]}</div>
-            <h4 class="text-slate-300 font-bold"><i class="fa-solid fa-truck mr-4 text-emerald-600"></i>  ">${feature.geometry.coordinates[1]}</div>
+            <div class="p-5 bg-slate-800 text-white basis-1/3 text-center">
+            <i class="fa-solid fa-truck mr-4 text-emerald-600"></i>
+                <h3 class="text-slate-300 font-bold">${feature.properties["NOM"]}</h3>
+                <h4 class="text-slate-300 font-bold">${feature.properties["ARROND"]}</h4>
+                <h4 class="text-slate-300 font-bold">${feature.properties["TYPE"]}</h4>
+                <h4 class="text-slate-300 font-bold">${feature.geometry.coordinates[1]}</h4>
             </div>`;
         });
         gabarit += "</div>";
