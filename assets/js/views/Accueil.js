@@ -1,4 +1,5 @@
 import dompurify from "dompurify";
+import { animate } from "animejs";
 import moment from "moment";
 import "moment/locale/fr";
 moment.locale("fr");
@@ -47,8 +48,8 @@ class Accueil {
         let gabarit = `<div class="p-5 grid grid-cols-3 gap-3">`;
         reponse.features.forEach(function (feature) {
             gabarit += `
-            <div class="p-5 bg-slate-800 text-white basis-1/3 text-center">
-            <i class="fa-solid fa-truck mr-4 text-emerald-600"></i>
+            <div class="p-5 bg-slate-800 text-white basis-1/3 text-center rounded-lg">
+                <i class="fa-solid fa-truck mr-4 text-emerald-600"></i>
                 <h3 class="text-slate-300 font-bold">${feature.properties["NOM"]}</h3>
                 <h4 class="text-slate-300 font-bold">${feature.properties["ARROND"]}</h4>
                 <h4 class="text-slate-300 font-bold">${feature.properties["TYPE"]}</h4>
@@ -60,6 +61,14 @@ class Accueil {
         const gabaritNouveau = dompurify.sanitize(gabarit);
 
         this.#listesActivitesHTML.insertAdjacentHTML("beforeend", gabaritNouveau);
+        animate('.fa-truck', {
+            x: '5cqh',
+            duration: 1000,
+            ease: 'inSine',
+            loop: true,
+            reversed: true,
+            alternate: true
+        });
     }
 }
 
