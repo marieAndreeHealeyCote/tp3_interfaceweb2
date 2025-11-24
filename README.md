@@ -19,5 +19,3 @@
 - Compiler, optimiser et héberger l'application
 
 - Écrire un code propre, professionnel et bien structuré sans bug et sans avertissement dans la console
-
-#### Vercel : tp3interfaceweb2-lntkbvbcv-marie-andrees-projects.vercel.app
