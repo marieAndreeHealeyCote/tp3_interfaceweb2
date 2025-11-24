@@ -1,5 +1,6 @@
 import dompurify from "dompurify";
 import { animate, engine } from "animejs";
+import Spinner from "../components/Spinner.js";
 import moment from "moment";
 import "moment/locale/fr";
 moment.locale("fr");
@@ -8,8 +9,11 @@ class Accueil {
     #application;
     #listesActivitesHTML;
 
+    #spinnerHTML;
+
     constructor(application) {
         this.#application = application;
+        this.#spinnerHTML = document.querySelector("mon-spinner");
         this.render();
     }
 
@@ -39,9 +43,17 @@ class Accueil {
     }
 
     async rechercherActivites() {
+        this.#spinnerHTML.setAttribute("msg", "    Veuillez patienter...");
+        this.#spinnerHTML.afficher();
         const requete = await fetch("https://donnees.montreal.ca/dataset/60850740-dd83-47ee-9a19-13d674e90314/resource/2dac229f-6089-4cb7-ab0b-eadc6a147d5d/download/terrain_sport_ext.json"
         );
         const reponse = await requete.json();
+        setTimeout(
+            function () {
+                this.#spinnerHTML.cacher();
+            }.bind(this),
+            1000
+        );
 
         this.#listesActivitesHTML.innerHTML = "";
 
@@ -49,7 +61,7 @@ class Accueil {
         reponse.features.forEach(function (feature) {
             gabarit += `
             <div class="p-5 bg-slate-800 text-white basis-1/3 text-center rounded-lg">
-                <i class="fa-solid fa-truck mr-4 text-emerald-600"></i>
+                <i class="fa-regular fa-futbol mr-4 text-emerald-600"></i>
                 <h3 class="text-slate-300 font-bold">${feature.properties["NOM"]}</h3>
                 <h4 class="text-slate-300 font-bold">${feature.properties["ARROND"]}</h4>
                 <h4 class="text-slate-300 font-bold">${feature.properties["TYPE"]}</h4>
@@ -61,7 +73,7 @@ class Accueil {
         const gabaritNouveau = dompurify.sanitize(gabarit);
 
         this.#listesActivitesHTML.insertAdjacentHTML("beforeend", gabaritNouveau);
-        animate('.fa-truck', {
+        animate('.fa-futbol', {
             x: '5cqh',
             duration: 1000,
             ease: 'inSine',
