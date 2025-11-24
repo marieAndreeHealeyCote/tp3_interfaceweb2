@@ -1,5 +1,5 @@
 import dompurify from "dompurify";
-import { animate } from "animejs";
+import { animate, engine } from "animejs";
 import moment from "moment";
 import "moment/locale/fr";
 moment.locale("fr");
@@ -30,7 +30,7 @@ class Accueil {
                 <img src="assets/img/montreal.webp" alt="Map de Montréal" class="w-full max-w-3xl mx-auto rounded-lg shadow"/>
                 <!-- image provenant de https://www.etsy.com/ca-fr/listing/685941544/affiche-de-voyage-montreal-quebec-canada-->
             </div>  
-            <div data-liste-activites></div>
+            <div data-liste-activites class="translate-y-[15cqh]"></div>
         </div>
         `;
         this.#listesActivitesHTML = this.#application.conteneurHTML.querySelector("[data-liste-activites]");
@@ -66,8 +66,14 @@ class Accueil {
             duration: 1000,
             ease: 'inSine',
             loop: true,
-            reversed: true,
-            alternate: true
+            alternate: true,
+            delay: 1500,
+        });
+        animate('[data-liste-activites]', {
+            y: '-15cqh',
+            duration: 1000,
+            ease: 'inOutExpo',
+            delay: 500,
         });
     }
 }
