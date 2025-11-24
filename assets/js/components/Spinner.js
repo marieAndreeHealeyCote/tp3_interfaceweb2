@@ -1,4 +1,5 @@
 /* Créateur : Maxime Lacasse :-) */
+/* Font awesome ne marche pas... je suis allée chercher un emoticone sur la page https://emojidb.org/montreal-canadiens-emojis */
 class Spinner extends HTMLElement {
     constructor() {
         super();
